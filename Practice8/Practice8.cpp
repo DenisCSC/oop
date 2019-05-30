@@ -4,21 +4,21 @@
 #include "pch.h"
 #include <iostream>
 #include <iostream>
-#include <string> // подключаем строки
-#include <fstream> // подключаем файлы
+#include <string> 
+#include <fstream> 
 
-using namespace std; // используем стандартное пространство имен
+using namespace std; 
 
 int main() {
-    string s; // сюда будем класть считанные строки
-    ifstream file("some_text.txt"); // файл из которого читаем (дл€ линукс путь будет выгл€деть по другому)
+    string s; 
+    ifstream file("some_text.txt"); 
 
-    while (getline(file, s)) { // пока не достигнут конец файла класть очередную строку в переменную (s)
-        s += "\n"; // что нибудь делаем со строкой например € добавл€ю плюсик в конце каждой строки
-        cout << s << endl; // и снова вывожу на экран но уже модифицированную строку (без записи ее в файл)
+    while (getline(file, s)) { 
+        s += "\n"; 
+        cout << s << endl;
     }
 
-    file.close(); // об€зательно закрываем файл что бы не повредить его
+    file.close();
 
     return 0;
 }
